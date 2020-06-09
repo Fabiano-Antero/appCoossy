@@ -1,0 +1,7 @@
+{
+  "name": "coosyApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
