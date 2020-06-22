@@ -53,6 +53,10 @@ form{
       font-size: 15px;
     }
     ion-input{
+        --background: rgba(76, 175, 80, 0.0);
         --color: #fff;
     }
+  }
+  .erros{
+      color: #f496be;
   }

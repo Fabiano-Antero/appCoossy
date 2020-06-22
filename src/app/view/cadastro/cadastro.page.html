@@ -11,9 +11,9 @@
             <ion-input type="text" name="nome" formControlName="nome"></ion-input>
           </ion-item>
           <div *ngIf="fGroup.controls.nome.errors" class="ion-text-center">
-            <p *ngIf="fGroup.controls.nome.errors.minlength" class="ion-padding-start ">Por favor, digite seu nome por
+            <p *ngIf="fGroup.controls.nome.errors.minlength" class="ion-padding-start erros">Por favor, digite seu nome por
               completo!</p>
-            <p *ngIf="fGroup.controls.nome.errors.maxlength" class="ion-padding-start ">O valor máximo de 50
+            <p *ngIf="fGroup.controls.nome.errors.maxlength" class="ion-padding-start erros">O valor máximo de 50
               caracteres
               foi excedido!</p>
           </div>
@@ -86,7 +86,7 @@
             <ion-input type="email" name="email" formControlName="email"></ion-input>
           </ion-item>
           <div *ngIf="fGroup.controls.email.errors" class="ion-text-center">
-            <p *ngIf="fGroup.controls.email.errors.email" class="ion-padding-start ">E-mail inválido!</p>
+            <p *ngIf="fGroup.controls.email.errors.email" class="ion-padding-start erros">E-mail inválido!</p>
           </div>
         </ion-col>
       </ion-row>
@@ -97,7 +97,7 @@
             <ion-input type="password" name="password" formControlName="password"></ion-input>
           </ion-item>
           <div *ngIf="fGroup.controls.password.errors" class="ion-text-center">
-            <p *ngIf="fGroup.controls.password.errors.pattern" class="ion-padding-start ">
+            <p *ngIf="fGroup.controls.password.errors.pattern" class="ion-padding-start erros">
               Sua senha deve conter pelo menos um número ou uma letra.
             </p>
           </div>
