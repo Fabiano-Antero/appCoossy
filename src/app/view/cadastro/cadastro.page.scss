@@ -5,7 +5,8 @@ ion-button{
 }
 
 ion-content{
-    --background: #f2007a !important;
+    --background: rgb(37,16,62);
+    --background: linear-gradient(0deg, rgba(37,16,62,1) 0%, rgba(160,23,83,1) 35%, rgba(221,27,92,1) 100%);
     
 }
 
@@ -18,6 +19,7 @@ form{
     display: block;
     padding-top: 10mm;
     width: 35%;
+    margin-top: 10%;
     margin-bottom: 10%;
   }
 
@@ -38,7 +40,7 @@ form{
   ion-item {
     margin: auto;
     display: block;
-    --background: #f2007a;
+    --background: rgba(76, 175, 80, 0.0);
     --border-color: #fff;
     padding-right: 15px;
     
