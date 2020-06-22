@@ -1,7 +1,8 @@
 {
   "name": "coosyApp",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }

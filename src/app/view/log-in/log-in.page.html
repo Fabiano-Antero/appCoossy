@@ -1,0 +1,45 @@
+
+
+<ion-content>
+  <form [formGroup]="fGroup" (ngSubmit)="onSubmit()">
+    <ion-grid class="grid">
+      <img src="../../../assets/img/coosy@2x.png" id="logo">
+
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">E-mail</ion-label>
+            <ion-input type="email" name="email" formControlName="email"></ion-input>
+          </ion-item>
+          <div *ngIf="fGroup.controls.email.errors" class="ion-text-center">
+            <p *ngIf="fGroup.controls.email.errors.email" class="ion-padding-start erros">E-mail inválido!</p>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Senha</ion-label>
+            <ion-input type="password" name="password" formControlName="password"></ion-input>
+          </ion-item>
+          <div *ngIf="fGroup.controls.password.errors" class="ion-text-center">
+            <p *ngIf="fGroup.controls.password.errors.pattern" class="ion-padding-start erros">
+              Senha invalida!.
+            </p>
+          </div>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" size-md>
+          <ion-button type="submit" expand="block">
+            <h6>Logar</h6>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </form>
+</ion-content>

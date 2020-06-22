@@ -1,0 +1,120 @@
+<ion-content>
+  <ion-grid class="grid">
+    <img src="../../../assets/img/coosy@2x.png" id="logo">
+
+    
+    <form [formGroup]="fGroup" >
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Seu nome ou apelido</ion-label>
+            <ion-input type="text" name="nome" formControlName="nome"></ion-input>
+          </ion-item>
+          <div *ngIf="fGroup.controls.nome.errors" class="ion-text-center">
+            <p *ngIf="fGroup.controls.nome.errors.minlength" class="ion-padding-start ">Por favor, digite seu nome por
+              completo!</p>
+            <p *ngIf="fGroup.controls.nome.errors.maxlength" class="ion-padding-start ">O valor máximo de 50
+              caracteres
+              foi excedido!</p>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Nascimento</ion-label>
+            <ion-select value="brown" formControlName="nascimento" okText="Okay" cancelText="Dismiss">
+              <ion-select-option value="2010">2010</ion-select-option>
+              <ion-select-option value="2011">2009</ion-select-option>
+              <ion-select-option value="2012">2008</ion-select-option>
+              <ion-select-option value="2013">2007</ion-select-option>
+              <ion-select-option value="2013">2006</ion-select-option>
+              <ion-select-option value="2013">2005</ion-select-option>
+              <ion-select-option value="2013">2004</ion-select-option>
+              <ion-select-option value="2013">2003</ion-select-option>
+              <ion-select-option value="2013">2002</ion-select-option>
+              <ion-select-option value="2013">2001</ion-select-option>
+              <ion-select-option value="2013">2000</ion-select-option>
+              <ion-select-option value="1913">1999</ion-select-option>
+              <ion-select-option value="1913">1998</ion-select-option>
+              <ion-select-option value="1913">1997</ion-select-option>
+              <ion-select-option value="1913">1996</ion-select-option>
+              <ion-select-option value="1913">1995</ion-select-option>
+              <ion-select-option value="1913">1994</ion-select-option>
+              <ion-select-option value="1913">1993</ion-select-option>
+              <ion-select-option value="1913">1992</ion-select-option>
+              <ion-select-option value="1913">1991</ion-select-option>
+              <ion-select-option value="1913">1990</ion-select-option>
+              <ion-select-option value="1913">1989</ion-select-option>
+              <ion-select-option value="1913">1988</ion-select-option>
+              <ion-select-option value="1983">1987</ion-select-option>
+              <ion-select-option value="1983">1986</ion-select-option>
+              <ion-select-option value="1983">1985</ion-select-option>
+              <ion-select-option value="1983">1984</ion-select-option>
+              <ion-select-option value="1983">1983</ion-select-option>
+              <ion-select-option value="1983">1982</ion-select-option>
+              <ion-select-option value="1983">1981</ion-select-option>
+              <ion-select-option value="1983">1980</ion-select-option>
+              <ion-select-option value="1983">1979</ion-select-option>
+              <ion-select-option value="1983">1978</ion-select-option>
+              <ion-select-option value="1983">1977</ion-select-option>
+              <ion-select-option value="1983">1976</ion-select-option>
+              <ion-select-option value="1983">1975</ion-select-option>
+              <ion-select-option value="1983">1974</ion-select-option>
+              <ion-select-option value="1983">1973</ion-select-option>
+              <ion-select-option value="1983">1972</ion-select-option>
+              <ion-select-option value="1983">1971</ion-select-option>
+              <ion-select-option value="1983">1970</ion-select-option>
+              <ion-select-option value="1983">1969</ion-select-option>
+              <ion-select-option value="1983">1968</ion-select-option>
+              <ion-select-option value="1983">1967</ion-select-option>
+              <ion-select-option value="1983">1966</ion-select-option>
+              <ion-select-option value="1983">1965</ion-select-option>
+              <ion-select-option value="1983">1964</ion-select-option>
+              <ion-select-option value="1983">1963</ion-select-option>
+              <ion-select-option value="1983">1962</ion-select-option>
+              <ion-select-option value="1983">1961</ion-select-option>
+              <ion-select-option value="1983">1960</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">E-mail</ion-label>
+            <ion-input type="email" name="email" formControlName="email"></ion-input>
+          </ion-item>
+          <div *ngIf="fGroup.controls.email.errors" class="ion-text-center">
+            <p *ngIf="fGroup.controls.email.errors.email" class="ion-padding-start ">E-mail inválido!</p>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Senha</ion-label>
+            <ion-input type="password" name="password" formControlName="password"></ion-input>
+          </ion-item>
+          <div *ngIf="fGroup.controls.password.errors" class="ion-text-center">
+            <p *ngIf="fGroup.controls.password.errors.pattern" class="ion-padding-start ">
+              Sua senha deve conter pelo menos um número ou uma letra.
+            </p>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row class="mt">
+        <ion-col size="12" size-md>
+          <ion-button type="submit"  expand="block" (click)="sendCadastro(fGroup.value)">
+            <h6>Criar cadastro</h6>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row id="cadastro">
+        <ion-col size="12" size-md>
+          <p>Já é cadatrado? <a id="link2" href="/login">Então faça o log-in!</a></p>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
+</ion-content>
